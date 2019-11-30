@@ -27,11 +27,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z)&&Hp>0)
         {
             Hurt();
         }
-        if (Hp <= 0)
+        if (Hp <= 0&& DeadCount<1)
         {
             print("殭屍剩於血量" + 0);
             Dead();

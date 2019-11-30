@@ -27,11 +27,11 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X)&&Hp > 0)
         {
             Hurt();
         }
-        if (Hp <= 0)
+        if (Hp <= 0&&DeadCount < 1)
         {
 
             Dead();
